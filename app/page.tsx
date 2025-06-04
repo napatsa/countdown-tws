@@ -138,7 +138,12 @@ export default function Home() {
             <TimeBox label="วินาที" value={seconds} />
           </div>
         ) : (
-          <div className="text-3xl font-bold text-green-500"></div>
+          <div className="flex gap-4 text-center text-white mb-12 max-md:px-[20px]">
+            <TimeBox label="วัน" value={0} />
+            <TimeBox label="ชั่วโมง" value={0} />
+            <TimeBox label="นาที" value={0} />
+            <TimeBox label="วินาที" value={0} />
+          </div>
         )}
         <div className="flex justify-center items-center">
           <Link target="_blank" href="https://discord.gg/thewallsurvivalsrp">
