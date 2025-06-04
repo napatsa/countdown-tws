@@ -22,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <title>TWS</title>
       <body className={`${KanitFont.variable}`}>{children}</body>
     </html>
   );
