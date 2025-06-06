@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/next";
 import { Kanit } from "next/font/google";
 import type { Metadata } from "next";
 
@@ -22,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${KanitFont.variable}`}>{children}</body>
+      <body className={`${KanitFont.variable}`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
