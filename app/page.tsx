@@ -9,7 +9,7 @@ import Link from "next/link";
 import { loadAll } from "@tsparticles/all";
 
 export default function Home() {
-  const targetDate = new Date("2025-06-07T18:00:00");
+  const targetDate = new Date("2025-06-14T18:00:00");
   const [timeLeft, setTimeLeft] = useState(0);
   const [init, setInit] = useState(false);
 
