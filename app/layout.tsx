@@ -1,7 +1,6 @@
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/next";
-import Head from "next/head";
 import { Kanit } from "next/font/google";
 import MainLayout from "../components/MainLayout";
 import type { Metadata } from "next";
@@ -16,6 +15,29 @@ const KanitFont = Kanit({
 export const metadata: Metadata = {
   title: "TWS",
   description: "Information about The Wall Survival [SRP] server",
+  openGraph: {
+    title: "TWS",
+    description: "Information about The Wall Survival [SRP] server",
+    url: "https://countdown-tws.vercel.app/",
+    siteName: "TWS",
+    images: [
+      {
+        url: "https://countdown-tws.vercel.app/images/tws.png",
+        width: 1200,
+        height: 630,
+        alt: "The Wall Survival",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TWS",
+    description: "Information about The Wall Survival [SRP] server",
+    images: ["https://countdown-tws.vercel.app/images/tws.png"],
+  },
+  metadataBase: new URL("https://countdown-tws.vercel.app"),
 };
 
 export default function RootLayout({
@@ -25,19 +47,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta property="og:title" content="TWS" />
-        <meta
-          property="og:description"
-          content="Information about The Wall Survival [SRP] server"
-        />
-        <meta
-          property="og:image"
-          content="https://countdown-tws.vercel.app/images/tws.png"
-        />
-        <meta property="og:url" content="https://countdown-tws.vercel.app/" />
-        <meta property="og:type" content="website" />
-      </Head>
       <body className={`${KanitFont.variable}`}>
         <MainLayout>{children}</MainLayout>
         <Analytics />
