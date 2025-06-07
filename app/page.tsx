@@ -98,7 +98,7 @@ export default function Home() {
             >
               <div className="border-2 max-md:border border-white flex items-center px-4 py-2 hover:bg-white hover:text-[#4e4e4e] transition-all duration-200 hover:drop-shadow-lg cursor-pointer">
                 <svg
-                  className="w-5 h-5 mr-2 max-md:w-5 max-md:h-5"
+                  className="w-5 h-5 mr-2 max-md:w-4 max-md:h-4"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
