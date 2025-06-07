@@ -2,17 +2,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import Head from "next/head";
 import Link from "next/link";
-import { loadAll } from "@tsparticles/all";
 
 export default function Home() {
   const targetDate = new Date("2025-06-14T18:00:00");
   const [timeLeft, setTimeLeft] = useState(0);
-  const [init, setInit] = useState(false);
 
   const days = Math.floor(timeLeft / 86400);
   const hours = Math.floor((timeLeft % 86400) / 3600);
@@ -27,58 +24,6 @@ export default function Home() {
       <div className="text-sm text-gray-300">{label}</div>
     </div>
   );
-
-  const particlesOptions = useMemo(
-    () => ({
-      background: {
-        color: { value: "" },
-      },
-      particles: {
-        number: { value: 150 },
-        color: { value: "#ffffff" },
-        opacity: {
-          value: { min: 0.1, max: 0.4 },
-          random: true,
-          animation: {
-            enable: true,
-            speed: 1,
-            sync: false,
-          },
-        },
-        size: {
-          value: { min: 0.5, max: 5 },
-          random: true,
-          animation: {
-            enable: true,
-            speed: 2,
-            sync: false,
-          },
-        },
-        move: {
-          enable: true,
-          speed: { min: 0.2, max: 0.8 },
-          direction: "none",
-          random: true,
-          straight: false,
-          outModes: { default: "out" },
-          attract: { enable: false },
-          gravity: { enable: false },
-          drift: 0,
-          warp: false,
-        },
-      },
-      detectRetina: true,
-    }),
-    []
-  );
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadAll(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
 
   useEffect(() => {
     // อัพเดทเวลาทุกวินาที
@@ -101,21 +46,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const staticContent = useMemo(
-    () => (
-      <>
-        <Particles
-          className="z-10 absolute inset-0"
-          id="tsparticles"
-          options={particlesOptions as any}
-        />
-      </>
-    ),
-    [particlesOptions]
-  );
-
-  if (!init) return <div></div>;
-
   return (
     <>
       <Head>
@@ -125,7 +55,6 @@ export default function Home() {
         />
       </Head>
       <div className="absolute inset-0 flex items-center justify-center">
-        {staticContent}
         <div className="relative z-20 overflow-hidden">
           <div
             className="flex justify-center text-[50px] font-bold mb-10 max-md:text-[28px]"
