@@ -80,17 +80,17 @@ function MainLayout({ children }: any) {
   const staticContent = useMemo(
     () => (
       <>
-        <Particles
-          className="z-10 absolute inset-0"
-          id="tsparticles"
-          options={particlesOptions as any}
-        />
+        {init && (
+          <Particles
+            className="z-10 absolute inset-0"
+            id="tsparticles"
+            options={particlesOptions as any}
+          />
+        )}
       </>
     ),
-    [particlesOptions]
+    [particlesOptions, init]
   );
-
-  if (!init) return <div></div>;
 
   return (
     <div>
