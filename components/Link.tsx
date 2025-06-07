@@ -3,6 +3,9 @@ import Link from "next/link";
 import React from "react";
 
 function CustomLink({ children, href, onClick }: any) {
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "";
+
   return (
     <Link
       onClick={onClick}
@@ -13,7 +16,9 @@ function CustomLink({ children, href, onClick }: any) {
         {children}
         <div
           id="underline"
-          className={`w-0 h-[1px] bg-white transition-all duration-300`}
+          className={`h-[1px] ${
+            pathname === href ? "w-full" : "w-0"
+          } bg-white transition-all duration-300`}
         />
       </div>
     </Link>
