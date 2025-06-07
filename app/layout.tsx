@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "TWS",
-    description: "Information about The Wall Survival [SRP] server",
-    images: ["https://countdown-tws.vercel.app/images/og-image.png"],
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: "TWS",
+  //   description: "Information about The Wall Survival [SRP] server",
+  //   images: ["https://countdown-tws.vercel.app/images/og-image.png"],
+  // },
   metadataBase: new URL("https://countdown-tws.vercel.app"),
 };
 
