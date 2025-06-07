@@ -51,7 +51,7 @@ export default function Home() {
       <Head>
         <meta
           property="og:image"
-          content="https://countdown-tws.vercel.app/images/og-image.png"
+          content="https://countdown-tws.vercel.app/images/logo-the-wall.png"
         />
       </Head>
       <div className="absolute inset-0 flex items-center justify-center">

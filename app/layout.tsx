@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://countdown-tws.vercel.app/images/og-image.png",
+        url: "https://countdown-tws.vercel.app/images/logo-the-wall.png",
         width: 1200,
         height: 630, // เปลี่ยนเป็น 630 (มาตรฐาน OG)
         alt: "The Wall Survival",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TWS - The Wall Survival",
     description: "Information about The Wall Survival [SRP] server",
-    images: ["https://countdown-tws.vercel.app/images/og-image.png"],
+    images: ["https://countdown-tws.vercel.app/images/logo-the-wall.png"],
   },
 
   // Icons
