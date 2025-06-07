@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import Particles, { initParticlesEngine } from "@tsparticles/react";
+// import Particles, { initParticlesEngine } from "@tsparticles/react";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
 import CustomLink from "./Link";
 import Hamburger from "hamburger-react";
 import Link from "next/link";
-import { loadAll } from "@tsparticles/all";
+// import { loadAll } from "@tsparticles/all";
 import { useClickAway } from "react-use";
 
 function MainLayout({ children }: any) {
   const [open, setOpen] = useState(false);
-  const [init, setInit] = useState(false);
+  // const [init, setInit] = useState(false);
   const ref = useRef(null);
   const hamburgerRef = useRef(null);
 
@@ -25,76 +25,76 @@ function MainLayout({ children }: any) {
     setOpen(false);
   });
 
-  const particlesOptions = useMemo(
-    () => ({
-      background: {
-        color: { value: "" },
-      },
-      particles: {
-        number: { value: 150 },
-        color: { value: "#ffffff" },
-        opacity: {
-          value: { min: 0.1, max: 0.4 },
-          random: true,
-          animation: {
-            enable: true,
-            speed: 1,
-            sync: false,
-          },
-        },
-        size: {
-          value: { min: 0.5, max: 5 },
-          random: true,
-          animation: {
-            enable: true,
-            speed: 2,
-            sync: false,
-          },
-        },
-        move: {
-          enable: true,
-          speed: { min: 0.2, max: 0.8 },
-          direction: "none",
-          random: true,
-          straight: false,
-          outModes: { default: "out" },
-          attract: { enable: false },
-          gravity: { enable: false },
-          drift: 0,
-          warp: false,
-        },
-      },
-      detectRetina: true,
-    }),
-    []
-  );
+  // const particlesOptions = useMemo(
+  //   () => ({
+  //     background: {
+  //       color: { value: "" },
+  //     },
+  //     particles: {
+  //       number: { value: 150 },
+  //       color: { value: "#ffffff" },
+  //       opacity: {
+  //         value: { min: 0.1, max: 0.4 },
+  //         random: true,
+  //         animation: {
+  //           enable: true,
+  //           speed: 1,
+  //           sync: false,
+  //         },
+  //       },
+  //       size: {
+  //         value: { min: 0.5, max: 5 },
+  //         random: true,
+  //         animation: {
+  //           enable: true,
+  //           speed: 2,
+  //           sync: false,
+  //         },
+  //       },
+  //       move: {
+  //         enable: true,
+  //         speed: { min: 0.2, max: 0.8 },
+  //         direction: "none",
+  //         random: true,
+  //         straight: false,
+  //         outModes: { default: "out" },
+  //         attract: { enable: false },
+  //         gravity: { enable: false },
+  //         drift: 0,
+  //         warp: false,
+  //       },
+  //     },
+  //     detectRetina: true,
+  //   }),
+  //   []
+  // );
 
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadAll(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
+  // useEffect(() => {
+  //   initParticlesEngine(async (engine) => {
+  //     await loadAll(engine);
+  //   }).then(() => {
+  //     setInit(true);
+  //   });
+  // }, []);
 
-  const staticContent = useMemo(
-    () => (
-      <>
-        <Particles
-          className="z-10 absolute inset-0"
-          id="tsparticles"
-          options={particlesOptions as any}
-        />
-      </>
-    ),
-    [particlesOptions]
-  );
+  // const staticContent = useMemo(
+  //   () => (
+  //     <>
+  //       <Particles
+  //         className="z-10 absolute inset-0"
+  //         id="tsparticles"
+  //         options={particlesOptions as any}
+  //       />
+  //     </>
+  //   ),
+  //   [particlesOptions]
+  // );
 
-  if (!init) return <div></div>;
+  // if (!init) return <div></div>;
 
   return (
     <div>
-      {staticContent}
+      {/* {staticContent} */}
       <img
         src="/images/tws.png"
         alt="survival bg"
