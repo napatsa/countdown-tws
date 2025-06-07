@@ -127,6 +127,10 @@ function MainLayout({ children }: any) {
           บทนำ
         </CustomLink>
         <br />
+        <CustomLink href="/teaser" onClick={() => setOpen(false)}>
+          Teaser
+        </CustomLink>
+        <br />
         <div className="text-[20px] mb-5 text-[#bdbdbd]">หมู่บ้าน</div>
         <div className="pl-[20px]">
           <div>
