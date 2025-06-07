@@ -48,12 +48,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <meta
-          property="og:image"
-          content="https://countdown-tws.vercel.app/images/og-image.png"
-        />
-      </Head>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative z-20 overflow-hidden">
           <div
