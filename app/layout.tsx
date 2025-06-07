@@ -16,6 +16,41 @@ export const metadata: Metadata = {
   title: "TWS - The Wall Survival",
   description: "Information about The Wall Survival [SRP] server",
   keywords: ["TWS", "The Wall Survival", "SRP", "roleplay", "server"],
+
+  // Open Graph
+  openGraph: {
+    title: "TWS - The Wall Survival",
+    description: "Information about The Wall Survival [SRP] server",
+    url: "https://countdown-tws.vercel.app",
+    siteName: "TWS",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://countdown-tws.vercel.app/images/og-image.png",
+        width: 1200,
+        height: 630, // เปลี่ยนเป็น 630 (มาตรฐาน OG)
+        alt: "The Wall Survival",
+        type: "image/png",
+      },
+    ],
+  },
+
+  // Twitter
+  twitter: {
+    card: "summary_large_image",
+    title: "TWS - The Wall Survival",
+    description: "Information about The Wall Survival [SRP] server",
+    images: ["https://countdown-tws.vercel.app/images/og-image.png"],
+  },
+
+  // Icons
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+
+  metadataBase: new URL("https://countdown-tws.vercel.app"),
 };
 
 export default function RootLayout({
