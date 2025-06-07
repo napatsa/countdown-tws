@@ -26,7 +26,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <meta property="og:image" content="/images/tws.png" />
+        <meta property="og:title" content="TWS" />
+        <meta
+          property="og:description"
+          content="Information about The Wall Survival [SRP] server"
+        />
+        <meta
+          property="og:image"
+          content="https://countdown-tws.vercel.app/images/tws.png"
+        />
+        <meta property="og:url" content="https://countdown-tws.vercel.app/" />
+        <meta property="og:type" content="website" />
       </Head>
       <body className={`${KanitFont.variable}`}>
         <MainLayout>{children}</MainLayout>
