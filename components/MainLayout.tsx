@@ -11,7 +11,14 @@ import { useClickAway } from "react-use";
 function MainLayout({ children }: any) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
+  const hamburgerRef = useRef(null);
+
   useClickAway(ref, () => {
+    const hamburgerElement = hamburgerRef.current as unknown as HTMLElement;
+
+    if (hamburgerElement && hamburgerElement.contains(event!.target as Node)) {
+      return; // ไม่ทำอะไรถ้าคลิกใน hamburger
+    }
     setOpen(false);
   });
 
@@ -22,7 +29,11 @@ function MainLayout({ children }: any) {
         alt="survival bg"
         className="z-0 fixed inset-0 w-full h-full object-cover bg-center object-cover object-top"
       />
-      <div className="z-[60] fixed top-0 right-0  flex items-center justify-between p-2">
+      <div
+        ref={hamburgerRef}
+        id="hamburger"
+        className="z-[60] fixed top-0 right-0  flex items-center justify-between p-2"
+      >
         <Hamburger toggled={open} toggle={setOpen} size={28} color="white" />
       </div>
       <Link href="https://forms.gle/1ijSbErg8ZzAaiPD7" target="_blank">
