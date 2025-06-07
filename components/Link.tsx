@@ -1,10 +1,12 @@
+"use client";
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 function CustomLink({ children, href, onClick }: any) {
-  const pathname =
-    typeof window !== "undefined" ? window.location.pathname : "";
+  const pathname = usePathname();
 
   return (
     <Link
