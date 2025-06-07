@@ -1,6 +1,6 @@
 import React from "react";
 
-function BlackRock() {
+function Intro() {
   return (
     <div className="relative ">
       <div className="h-[100px]"></div>
@@ -94,4 +94,4 @@ function BlackRock() {
   );
 }
 
-export default BlackRock;
+export default Intro;

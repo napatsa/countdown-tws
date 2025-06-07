@@ -1,6 +1,6 @@
 import React from "react";
 
-function BlackRock() {
+function HawksNest() {
   return (
     <div className="relative flex flex-col items-center justify-center h-[100vh]">
       <div className="relative bg-black bg-opacity-50 p-[50px] max-w-[600px]">
@@ -29,4 +29,4 @@ function BlackRock() {
   );
 }
 
-export default BlackRock;
+export default HawksNest;
