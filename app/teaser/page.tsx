@@ -7,9 +7,9 @@ function Teaser() {
 
   return (
     <div className="relative flex flex-col items-center justify-center h-[100vh]">
-      <div className="relative bg-black bg-opacity-50 p-[50px] max-md:p-[20px]">
+      <div className="relative bg-black bg-opacity-50 p-[50px] max-md:p-[30px]">
         <div
-          className="absolute top-[-43px] left-[10px] text-[50px] mb-9 max-md:text-[30px] max-md:top-[-30px]"
+          className="absolute top-[-43px] left-[10px] text-[50px] mb-9"
           style={{ textShadow: "2px 2px 10px rgba(0,0,0,0.7)" }}
         >
           Teaser
