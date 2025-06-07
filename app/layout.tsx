@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     siteName: "TWS",
     images: [
       {
-        url: "https://countdown-tws.vercel.app/images/tws.png",
+        url: "https://countdown-tws.vercel.app/images/og-image.png",
         width: 1200,
-        height: 630,
+        height: 497,
         alt: "The Wall Survival",
       },
     ],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TWS",
     description: "Information about The Wall Survival [SRP] server",
-    images: ["https://countdown-tws.vercel.app/images/tws.png"],
+    images: ["https://countdown-tws.vercel.app/images/og-image.png"],
   },
   metadataBase: new URL("https://countdown-tws.vercel.app"),
 };
