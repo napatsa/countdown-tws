@@ -108,7 +108,7 @@ function MainLayout({ children }: any) {
         <Hamburger toggled={open} toggle={setOpen} size={28} color="white" />
       </div>
       <Link href="https://forms.gle/1ijSbErg8ZzAaiPD7" target="_blank">
-        <div className="z-50 fixed cursor-pointer border-[2px] bottom-[20px] rounded-[20px] right-[20px] px-4 py-[6px] transition-all duration-200 hover:bg-white hover:text-[#4e4e4e]">
+        <div className="z-50 fixed cursor-pointer max-md:text-[12px] max-md:border-[1px] border-[2px] bottom-[20px] rounded-[20px] right-[20px] px-4 py-[6px] transition-all duration-200 hover:bg-white hover:text-[#4e4e4e]">
           # Whitelist
         </div>
       </Link>
