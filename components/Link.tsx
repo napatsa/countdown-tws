@@ -13,7 +13,7 @@ function CustomLink({ children, href, onClick, className, target }: any) {
       onClick={onClick}
       href={href || "/fallback"}
       target={target || "_self"}
-      className={`${className} [&:hover>div>#underline]:w-full [&>div]:text-[20px]`}
+      className={`[&:hover>div>#underline]:w-full [&>div]:text-[20px] ${className}`}
     >
       <div className="w-fit">
         {children}
