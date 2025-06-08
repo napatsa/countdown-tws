@@ -5,16 +5,17 @@ import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 
-function CustomLink({ children, href, onClick }: any) {
+function CustomLink({ children, href, onClick, className, target }: any) {
   const pathname = usePathname();
 
   return (
     <Link
       onClick={onClick}
       href={href || "/fallback"}
-      className="[&:hover>div>#underline]:w-full"
+      target={target || "_self"}
+      className={`${className} [&:hover>div>#underline]:w-full [&>div]:text-[20px]`}
     >
-      <div className="w-fit text-[20px]">
+      <div className="w-fit">
         {children}
         <div
           id="underline"

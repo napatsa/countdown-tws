@@ -2,8 +2,8 @@ import React from "react";
 
 function Intro() {
   return (
-    <div className="relative ">
-      <div className="h-[100px]"></div>
+    <div className="relative">
+      <div className="h-[150px]"></div>
       <div className="relative m-auto bg-black bg-opacity-50 p-[50px] max-w-[800px]">
         <div
           className="absolute top-[-43px] left-[10px] text-[50px] mb-9"
@@ -89,7 +89,7 @@ function Intro() {
         <br />
         แล้วคุณล่ะ...จะเลือกฆ่าเพื่อรอด หรือยอมตายเพื่อเปลี่ยนโลก?
       </div>
-      <div className="h-[100px]"></div>
+      <div className="h-[150px]"></div>
     </div>
   );
 }

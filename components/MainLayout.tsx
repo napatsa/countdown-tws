@@ -103,15 +103,19 @@ function MainLayout({ children }: any) {
       <div
         ref={hamburgerRef}
         id="hamburger"
-        className="z-[60] fixed top-0 right-0  flex items-center justify-between p-2"
+        className={`z-[60] fixed bg-black ${
+          open ? "bg-opacity-0" : "bg-opacity-50"
+        }  top-[10px] right-[10px] flex items-center justify-between p-1 rounded-[50%] transition-all duration-100`}
       >
-        <Hamburger toggled={open} toggle={setOpen} size={28} color="white" />
+        <Hamburger toggled={open} toggle={setOpen} size={24} color="white" />
       </div>
-      <Link href="https://forms.gle/1ijSbErg8ZzAaiPD7" target="_blank">
-        <div className="z-50 fixed cursor-pointer max-md:text-[12px] max-md:border-[1px] border-[2px] bottom-[20px] rounded-[20px] right-[20px] px-4 py-[6px] transition-all duration-200 hover:bg-white hover:text-[#4e4e4e]">
-          # Whitelist
-        </div>
-      </Link>
+      <div className="flex items-center gap-2 z-50 fixed bottom-[15px] right-[15px]">
+        <Link href="https://forms.gle/AkrpJqv93BjLHvLn6" target="_blank">
+          <div className="cursor-pointer max-md:text-[12px] max-md:border-[1px] border-[2px] rounded-[20px] px-4 py-[6px] transition-all duration-200 hover:bg-white hover:text-[#4e4e4e]">
+            # Whitelist
+          </div>
+        </Link>
+      </div>
       <div
         ref={ref}
         className={`z-50 fixed overflow-auto backdrop-blur-md bg-black bg-opacity-50 ${
@@ -119,22 +123,40 @@ function MainLayout({ children }: any) {
         } top-0 h-[100vh] w-[300px] transition-all duration-300 ease-in-out px-6 py-5`}
       >
         <div className="h-[50px]"></div>
-        <CustomLink href="/" onClick={() => setOpen(false)}>
+        <CustomLink
+          href="/"
+          className="max-md:[&>div]:text-[18px]"
+          onClick={() => setOpen(false)}
+        >
           หน้าหลัก
         </CustomLink>
         <br />
-        <CustomLink href="/intro" onClick={() => setOpen(false)}>
+        <CustomLink
+          href="/intro"
+          className="max-md:[&>div]:text-[18px]"
+          onClick={() => setOpen(false)}
+        >
           บทนำ
         </CustomLink>
         <br />
-        <CustomLink href="/teaser" onClick={() => setOpen(false)}>
+        <CustomLink
+          href="/teaser"
+          className="max-md:[&>div]:text-[18px]"
+          onClick={() => setOpen(false)}
+        >
           Teaser
         </CustomLink>
         <br />
-        <div className="text-[20px] mb-5 text-[#bdbdbd]">หมู่บ้าน</div>
+        <div className="text-[20px] mb-5 text-[#bdbdbd] max-md:text-[18px]">
+          หมู่บ้าน
+        </div>
         <div className="pl-[20px]">
           <div>
-            <CustomLink href="/black-rock" onClick={() => setOpen(false)}>
+            <CustomLink
+              href="/black-rock"
+              className="max-md:[&>div]:text-[18px]"
+              onClick={() => setOpen(false)}
+            >
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +174,11 @@ function MainLayout({ children }: any) {
               </div>
             </CustomLink>
             <br />
-            <CustomLink href="/dead-fields" onClick={() => setOpen(false)}>
+            <CustomLink
+              href="/dead-fields"
+              className="max-md:[&>div]:text-[18px]"
+              onClick={() => setOpen(false)}
+            >
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +196,11 @@ function MainLayout({ children }: any) {
               </div>
             </CustomLink>
             <br />
-            <CustomLink href="/ash-fall" onClick={() => setOpen(false)}>
+            <CustomLink
+              href="/ash-fall"
+              className="max-md:[&>div]:text-[18px]"
+              onClick={() => setOpen(false)}
+            >
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +218,11 @@ function MainLayout({ children }: any) {
               </div>
             </CustomLink>
             <br />
-            <CustomLink href="/hawks-nest" onClick={() => setOpen(false)}>
+            <CustomLink
+              href="/hawks-nest"
+              className="max-md:[&>div]:text-[18px]"
+              onClick={() => setOpen(false)}
+            >
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +240,11 @@ function MainLayout({ children }: any) {
               </div>
             </CustomLink>
             <br />
-            <CustomLink href="/drift-wood" onClick={() => setOpen(false)}>
+            <CustomLink
+              href="/drift-wood"
+              className="max-md:[&>div]:text-[18px]"
+              onClick={() => setOpen(false)}
+            >
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -223,10 +261,18 @@ function MainLayout({ children }: any) {
                 Drift Wood
               </div>
             </CustomLink>
+            <br />
           </div>
         </div>
+        <CustomLink
+          href="/links"
+          className="max-md:[&>div]:text-[18px]"
+          onClick={() => setOpen(false)}
+        >
+          รวมลิงก์สำคัญ
+        </CustomLink>
       </div>
-      {children}
+      <div className="absolute inset-0 z-20">{children}</div>
     </div>
   );
 }
