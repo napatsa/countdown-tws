@@ -54,7 +54,7 @@ export default function Home() {
           content="https://countdown-tws.vercel.app/images/logo-the-wall-black.png"
         />
       </Head>
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="h-[100vh] flex items-center justify-center">
         <div className="relative z-20 overflow-hidden">
           <div
             className="flex justify-center text-[50px] font-bold mb-10 max-md:text-[28px]"

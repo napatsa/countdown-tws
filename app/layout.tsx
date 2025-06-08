@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Kanit } from "next/font/google";
 import MainLayout from "../components/MainLayout";
 import type { Metadata } from "next";
+import TransitionWrapper from "../components/Transition";
 
 const KanitFont = Kanit({
   variable: "--font-kanit",
@@ -67,7 +68,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
       </head>
       <body className={`${KanitFont.variable} antialiased`}>
-        <MainLayout>{children}</MainLayout>
+        <MainLayout>
+          <TransitionWrapper>{children}</TransitionWrapper>
+        </MainLayout>
         <Analytics />
       </body>
     </html>
