@@ -15,7 +15,7 @@ function Links() {
         <CustomLink
           target="_blank"
           href="https://forms.gle/AkrpJqv93BjLHvLn6"
-          className="[&>div]:text-[16px] "
+          className="[&>div]:!text-[16px]"
         >
           - Whitelist สำหรับกรอกข้อมูล The Wall Survival
         </CustomLink>
@@ -23,7 +23,7 @@ function Links() {
         <CustomLink
           target="_blank"
           href="https://www.canva.com/design/DAGopOY-Z1M/QzRf92KI6CZmBZCdRG5Jzg/view?utm_content=DAGopOY-Z1M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview"
-          className="[&>div]:text-[16px]"
+          className="[&>div]:!text-[16px]"
         >
           - Canva สำหรับการแก้ไขและใส่ข้อมูล
         </CustomLink>
@@ -31,7 +31,7 @@ function Links() {
         <CustomLink
           target="_blank"
           href="https://sites.google.com/view/thewallsurvival/หนาแรก"
-          className="[&>div]:text-[16px]"
+          className="[&>div]:!text-[16px]"
         >
           - ข้อกำหนดและเงื่อนไข
         </CustomLink>
