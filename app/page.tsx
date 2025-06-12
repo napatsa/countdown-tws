@@ -8,7 +8,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 export default function Home() {
-  const targetDate = new Date("2025-06-14T18:00:00");
+  const targetDate = new Date("2025-06-14T21:00:00");
   const [timeLeft, setTimeLeft] = useState(0);
 
   const days = Math.floor(timeLeft / 86400);
