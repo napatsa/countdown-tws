@@ -57,7 +57,7 @@ export default function Home() {
       <div className="h-[100vh] flex items-center justify-center">
         <div className="relative z-20 overflow-hidden">
           <div
-            className="flex justify-center text-[50px] font-bold mb-10 max-md:text-[28px]"
+            className="flex text-white justify-center text-[50px] font-bold mb-10 max-md:text-[28px]"
             style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}
           >
             THE WALL SURVIVAL
@@ -79,7 +79,7 @@ export default function Home() {
           )}
           <div className="flex justify-center items-center">
             <Link target="_blank" href="https://discord.gg/thewallsurvivalsrp">
-              <div className="border-2 max-md:border border-white flex items-center px-4 py-2 hover:bg-white hover:text-[#4e4e4e] transition-all duration-200 hover:drop-shadow-lg cursor-pointer">
+              <div className="border-2 max-md:border border-white flex items-center px-4 py-2 text-white hover:bg-white hover:text-[#4e4e4e] transition-all duration-200 hover:drop-shadow-lg cursor-pointer">
                 <svg
                   className="w-6 h-6  mr-2 max-md:w-5 max-md:h-5"
                   viewBox="0 0 24 24"
@@ -96,7 +96,7 @@ export default function Home() {
               href="https://www.facebook.com/thewallsurvivalsrp"
               className="relative ml-[-2px]"
             >
-              <div className="border-2 max-md:border border-white flex items-center px-4 py-2 hover:bg-white hover:text-[#4e4e4e] transition-all duration-200 hover:drop-shadow-lg cursor-pointer">
+              <div className="border-2 max-md:border border-white flex items-center px-4 py-2 text-white  hover:bg-white hover:text-[#4e4e4e] transition-all duration-200 hover:drop-shadow-lg cursor-pointer">
                 <svg
                   className="w-5 h-5 mr-2 max-md:w-4 max-md:h-4"
                   viewBox="0 0 24 24"
