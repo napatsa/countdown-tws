@@ -110,11 +110,11 @@ function MainLayout({ children }: any) {
         <Hamburger toggled={open} toggle={setOpen} size={24} color="white" />
       </div>
       <div className="flex items-center gap-2 z-50 fixed bottom-[15px] right-[15px]">
-        <Link href="https://forms.gle/AkrpJqv93BjLHvLn6" target="_blank">
+        {/* <Link href="https://forms.gle/AkrpJqv93BjLHvLn6" target="_blank">
           <div className="cursor-pointer max-md:text-[12px] max-md:border-[1px] border-[2px] rounded-[20px] px-4 py-[6px] transition-all duration-200 hover:bg-white hover:text-[#4e4e4e]">
             # Whitelist
           </div>
-        </Link>
+        </Link> */}
       </div>
       <div
         ref={ref}
