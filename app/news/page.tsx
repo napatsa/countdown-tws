@@ -8,6 +8,7 @@ import { useWindowSize } from "react-use";
 function News() {
   const { width } = useWindowSize();
   const [posts] = useState([
+    "https://www.facebook.com/thewallsurvivalsrp/posts/pfbid02EPBvD4ZRA7ZbUoUGfLx2BRWLkwGhSZaQMER851vTvnWHNu8S6CxCWjGjm9nypAeNl",
     "https://www.facebook.com/thewallsurvivalsrp/posts/pfbid0nx63EPiRqAJ64JkGhcophacxKWgPnXCTRpfMFarxsigo8Ck2oArjcpznkYvCbA9Bl",
     "https://www.facebook.com/thewallsurvivalsrp/posts/pfbid07TQUuS9dH6t9DoetXgoWM9mMqMXhSGHN5VeP1W31LPMV8SMRamcHbLxxtSpnJgmtl",
     "https://www.facebook.com/thewallsurvivalsrp/posts/pfbid0vsyJDpuPCBF2oU7YiqrQ1yCUaB3mbUVLEWtkMe5D9rSxggjhtiegh1ukqT3DaG3Wl",
