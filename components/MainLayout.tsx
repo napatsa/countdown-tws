@@ -118,7 +118,7 @@ function MainLayout({ children }: any) {
       </div>
       <div
         ref={ref}
-        className={`z-50 fixed overflow-auto backdrop-blur-md bg-black bg-opacity-50 ${
+        className={`scrollbar z-50 fixed overflow-auto backdrop-blur-md bg-black bg-opacity-50 ${
           open ? "right-[0px]" : "right-[-300px]"
         } top-0 h-[100vh] w-[300px] transition-all duration-300 ease-in-out px-6 py-5`}
       >
@@ -271,6 +271,15 @@ function MainLayout({ children }: any) {
         >
           รวมลิงก์สำคัญ
         </CustomLink>
+        <br />
+        <CustomLink
+          href="/news"
+          className="max-md:[&>div]:text-[18px]"
+          onClick={() => setOpen(false)}
+        >
+          ข่าวสาร
+        </CustomLink>
+        <br />
       </div>
       <div className="absolute inset-0 z-20">{children}</div>
     </div>
