@@ -273,14 +273,14 @@ function MainLayout({ children }: any) {
           รวมลิงก์สำคัญ
         </CustomLink>
         <br />
-        <CustomLink
+        {/* <CustomLink
           href="/news"
           className="max-md:[&>div]:text-[18px]"
           onClick={() => setOpen(false)}
         >
           ข่าวสาร
         </CustomLink>
-        <br />
+        <br /> */}
       </div>
       <div className="absolute inset-0 z-20">{children}</div>
     </div>
