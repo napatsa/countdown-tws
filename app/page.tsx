@@ -77,7 +77,7 @@ export default function Home() {
               <TimeBox label="นาที" value={minutes} />
               <TimeBox label="วินาที" value={seconds} />
               <div
-                className="absolute rotate-[315deg] text-[23px] left-[-55px] font-[600] max-md:hidden"
+                className="absolute rotate-[315deg] text-[23px] left-[-55px] top-0 font-[600] max-md:hidden"
                 style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}
               >
                 RUNNING FOR
