@@ -8,13 +8,16 @@ import Head from "next/head";
 import Link from "next/link";
 
 export default function Home() {
-  const targetDate = new Date("2025-06-14T21:00:00");
+  const targetDate = new Date("2025-06-14T21:45:00");
   const [timeLeft, setTimeLeft] = useState(0);
+  const [hasLaunched, setHasLaunched] = useState(false);
 
-  const days = Math.floor(timeLeft / 86400);
-  const hours = Math.floor((timeLeft % 86400) / 3600);
-  const minutes = Math.floor((timeLeft % 3600) / 60);
-  const seconds = timeLeft % 60;
+  const time = hasLaunched ? timeLeft : Math.max(timeLeft, 0);
+
+  const days = Math.floor(time / 86400);
+  const hours = Math.floor((time % 86400) / 3600);
+  const minutes = Math.floor((time % 3600) / 60);
+  const seconds = time % 60;
 
   const TimeBox = ({ label, value }: any) => (
     <div className="bg-black bg-opacity-50 px-4 py-5  shadow-md w-[200px] max-md:w-20">
@@ -26,23 +29,21 @@ export default function Home() {
   );
 
   useEffect(() => {
-    // อัพเดทเวลาทุกวินาที
-    const interval = setInterval(() => {
+    const update = () => {
       const now = new Date().getTime();
-      const distance = targetDate.getTime() - now;
+      const diff = targetDate.getTime() - now;
 
-      if (distance > 0) {
-        setTimeLeft(Math.floor(distance / 1000));
+      if (diff > 0) {
+        setHasLaunched(false);
+        setTimeLeft(Math.floor(diff / 1000));
       } else {
-        setTimeLeft(0);
+        setHasLaunched(true);
+        setTimeLeft(Math.floor((now - targetDate.getTime()) / 1000));
       }
-    }, 1000);
+    };
 
-    // เรียกครั้งแรกทันที
-    const now = new Date().getTime();
-    const distance = targetDate.getTime() - now;
-    setTimeLeft(distance > 0 ? Math.floor(distance / 1000) : 0);
-
+    update(); // run once immediately
+    const interval = setInterval(update, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -55,19 +56,32 @@ export default function Home() {
         />
       </Head>
       <div className="h-[100vh] flex items-center justify-center">
-        <div className="relative z-20 overflow-hidden">
+        <div className="relative z-20 max-md:overflow-hidden">
           <div
-            className="flex text-white justify-center text-[50px] font-bold mb-10 max-md:text-[28px]"
+            className="flex text-white justify-center text-[40px] font-bold mb-0 max-md:text-[24px] max-md:mb-4"
             style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}
           >
             THE WALL SURVIVAL
           </div>
+          <div
+            className="flex text-white justify-center text-[75px] font-bold mb-8 max-md:text-[45px]"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}
+          >
+            LIVE NOW
+          </div>
+
           {timeLeft > 0 ? (
-            <div className="flex gap-4 text-center text-white mb-12 max-md:px-[20px]">
+            <div className="relative flex gap-4 text-center text-white mb-12 max-md:px-[20px]">
               <TimeBox label="วัน" value={days} />
               <TimeBox label="ชั่วโมง" value={hours} />
               <TimeBox label="นาที" value={minutes} />
               <TimeBox label="วินาที" value={seconds} />
+              <div
+                className="absolute rotate-[315deg] text-[23px] left-[-55px] font-[600] max-md:hidden"
+                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}
+              >
+                RUNNING FOR
+              </div>
             </div>
           ) : (
             <div className="flex gap-4 text-center text-white mb-12 max-md:px-[20px]">

@@ -1,9 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useEffect, useState } from "react";
 
+import dynamic from "next/dynamic";
 import { useWindowSize } from "react-use";
+
+const FacebookEmbed = dynamic(
+  () => import("react-social-media-embed").then((mod) => mod.FacebookEmbed),
+  { ssr: false }
+);
 
 function News() {
   const { width } = useWindowSize();
