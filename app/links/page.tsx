@@ -14,10 +14,10 @@ function Links() {
         </div>
         <CustomLink
           target="_blank"
-          href="https://forms.gle/AkrpJqv93BjLHvLn6"
+          href="https://forms.gle/PeehuL2jfCmVancz8"
           className="[&>div]:!text-[16px]"
         >
-          - Whitelist สำหรับกรอกข้อมูล The Wall Survival
+          - Whitelist สำหรับกรอกข้อมูล The Wall Survival รอบที่ 3
         </CustomLink>
         <br />
         <CustomLink
