@@ -8,7 +8,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 export default function Home() {
-  const targetDate = new Date("2025-06-14T21:45:00");
+  const targetDate = new Date("2025-06-14T21:48:00");
   const [timeLeft, setTimeLeft] = useState(0);
   const [hasLaunched, setHasLaunched] = useState(false);
 
